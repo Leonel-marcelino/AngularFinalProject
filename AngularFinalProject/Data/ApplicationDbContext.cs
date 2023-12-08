@@ -5,11 +5,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 namespace AngularFinalProject.Data
+
+
 {
-    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
+
+    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>    
     {
-        
-    public DbSet<Recipe> Recipes { get; set; }
+        public ApplicationDbContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
+        {
+        }
+
+        public DbSet<Recipe> Recipes { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Ingredients> Ingredients { get; set; }
         public DbSet<Favorits> Favorites { get; set; }
