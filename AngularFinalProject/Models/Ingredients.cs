@@ -1,7 +1,10 @@
-﻿namespace AngularFinalProject.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AngularFinalProject.Models
 {
     public class Ingredients
     {
+        [Key]
         public Guid IngredientId { get; set; }
         public string Name { get; set; }
 
