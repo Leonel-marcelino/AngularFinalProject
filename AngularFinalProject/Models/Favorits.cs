@@ -1,11 +1,18 @@
-﻿namespace AngularFinalProject.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace AngularFinalProject.Models
 {
+    [PrimaryKey(nameof(RecipeID), nameof(UserId))]
     public class Favorits
     {
-        public string ApplicationUserId { get; set; } // Chave estrangeira para ApplicationUser
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        public Guid RecipeID { get; set; }
 
-        public int RecipeId { get; set; } // Chave estrangeira para Recipe
+        [DeleteBehavior(DeleteBehavior.NoAction)]
         public virtual Recipe Recipe { get; set; }
+
+        public string UserId { get; set; }
+
+        [DeleteBehavior(DeleteBehavior.NoAction)]
+        public virtual ApplicationUser User { get; set; }
     }
 }
