@@ -6,10 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 namespace AngularFinalProject.Data
-{
-    
 
-    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
+
+{
+
+    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>    
+
     {
 
         public ApplicationDbContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
