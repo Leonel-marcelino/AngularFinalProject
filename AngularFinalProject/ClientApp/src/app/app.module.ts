@@ -15,6 +15,7 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipesDetailsComponent } from './recipes-details/recipes-details.component';
 import { FooterComponent } from './footer/footer.component';
+import { RecipeAddComponent } from './recipe-add/recipe-add.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     FetchDataComponent,
     RecipesComponent,
     RecipesDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    RecipeAddComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,6 +40,8 @@ import { FooterComponent } from './footer/footer.component';
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
       { path: 'recipes', component: RecipesComponent },
       { path: 'recipe-detais', component: RecipesDetailsComponent },
+      { path: 'recipe-add', component: RecipeAddComponent },
+
     ])
   ],
   providers: [

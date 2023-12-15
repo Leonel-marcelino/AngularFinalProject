@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Adicionar Receita</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="recipe.name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descrição:</label>
+      <textarea class="form-control" id="description" name="description" [(ngModel)]="recipe.description" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Título:</label>
+      <input type="text" class="form-control" id="title" name="title" [(ngModel)]="recipe.title" required>
+    </div>
+
+    <div class="form-group">
+      <label for="difficulty">Dificuldade:</label>
+      <input type="number" class="form-control" id="difficulty" name="difficulty" [(ngModel)]="recipe.difficulty" required>
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Duração (minutos):</label>
+      <input type="number" class="form-control" id="duration" name="duration" [(ngModel)]="recipe.duration" required>
+    </div>
+    <!-- Adicione mais campos conforme necessário -->
+
+    <button type="submit" class="btn btn-primary">Adicionar Receita</button>
+  </form>
+</div>
+
+
