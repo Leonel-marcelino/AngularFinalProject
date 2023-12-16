@@ -6,6 +6,7 @@ namespace AngularFinalProject.Models
     public class ApplicationUser : IdentityUser
     {
 
+
         [Required]
         public bool IsAdmin { get; set; } = false;
 
@@ -13,7 +14,7 @@ namespace AngularFinalProject.Models
         public bool IsDeleted { get; set; } = false;
 
         [Required]
-        public bool IsLocked { get; set; } = false;
+        public bool IsLocked { get; set; } = false;   
 
         [Required]
         public DateTime created_date { get; set; } = DateTime.Now;
